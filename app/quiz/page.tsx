@@ -3,9 +3,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabaseClient';
 import Image from 'next/image';
-import { FaSnapchat, FaShareAlt } from 'react-icons/fa';
-import PrizesModal from '.././components/PrizesModal';
-import Link from 'next/link';
+
 
 
 
@@ -20,7 +18,6 @@ export default function QuizPage() {
     option2: string;
     correct_option: string;
   }
-  const [showPrizes, setShowPrizes] = useState(false);
   const [showThankYouMessage, setShowThankYouMessage] = useState(false);
   const [question, setQuestion] = useState<Question | null>(null);
   const [loading, setLoading] = useState(true);
